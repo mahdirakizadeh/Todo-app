@@ -1,0 +1,9 @@
+{% extends 'Base.html' %}
+
+{% block contend %}
+    <a class="btn btn-danger" href="{% url 'delete' todoo.id %}">Delete</a>
+    <a class="btn btn-primary" href="{% url 'update' todoo.id %}">Update</a>
+    <h3>{{ todoo.tittle }}</h3>
+    <p>{{ todoo.body }}</p>
+    <small>{{ todoo.created }}</small>
+{% endblock %}

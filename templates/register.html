@@ -1,0 +1,9 @@
+{% extends 'Base.html' %}
+
+{% block contend %}
+    <form action="", method="post", novalidate>
+    {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-dark" type="submit" value="Register">
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'Base.html' %}
+
+{% block contend %}
+    {% for todo in todos %}
+        <a href="{% url 'details' todo.id %}">{{ todo.tittle }}</a>
+        <small>{{ todo.created }}</small>
+        <p>{{ todo.body }}</p>
+    {% endfor %}
+{% endblock %}
